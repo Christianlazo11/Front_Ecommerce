@@ -1,11 +1,11 @@
 import './App.css'
-import { NavigationBar } from './components/navbar/NavigationBar'
+import { Home } from "./pages/Home";
 
 function App() {
 
   return (
     <>
-      <NavigationBar />
+      <Home />
     </>
   )
 }
