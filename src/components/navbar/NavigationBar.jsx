@@ -1,8 +1,10 @@
 import { Dropdown, Navbar, Avatar } from 'flowbite-react';
 import { Item } from './Item';
+import { NavbarLink } from "./NavbarLink";
 
 import { FaUserAlt } from "react-icons/fa";
 import { images } from "../../helpers/images";
+import { navBarLinks, userBarLinks } from "../../helpers/helpers";
 
 export const NavigationBar = () => {
     return (
@@ -35,37 +37,20 @@ export const NavigationBar = () => {
                                 Christian-lazo-u@hotmail.com
                             </span>
                         </Dropdown.Header>
-                        <Item>
-                            Carrito
-                        </Item>
-                        <Item>
-                            Configuración
-                        </Item>
-                        <Item>
-                            Mis compras
-                        </Item>
-                        <Dropdown.Divider />
-                        <Item>
-                            Cerrar Sesión
-                        </Item>
+                        {
+                            userBarLinks.map((e, index) => (
+                                <Item key={index} name = {e.name} link = {e.link}/>
+                            ))
+                        }
                     </Dropdown>
                     <Navbar.Toggle />
                 </div>
                 <Navbar.Collapse>
-                    <Navbar.Link
-                        active
-                        href="#"
-                    >
-                        <p>
-                            Inicio
-                        </p>
-                    </Navbar.Link>
-                    <Navbar.Link href="#">
-                        Categorias
-                    </Navbar.Link>
-                    <Navbar.Link href="#">
-                        Productos
-                    </Navbar.Link>
+                    {
+                        navBarLinks.map((e, index) => (
+                            <NavbarLink key={index} name={e.name} link={e.link} />
+                        ))
+                    }
 
                 </Navbar.Collapse>
             </Navbar>

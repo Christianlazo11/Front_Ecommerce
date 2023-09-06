@@ -1,6 +1,7 @@
+import {Link} from "react-router-dom";
 
-export const Item = (props) => {
+export const Item = ({name, link}) => {
   return (
-    <p>{props.children}</p>
+    <Link className="block ml-3" to={link}>{name}</Link>
   )
 }
