@@ -8,10 +8,11 @@ import { navBarLinks, userBarLinks } from "../../helpers/helpers";
 
 export const NavigationBar = () => {
     return (
-        <div className='max-w-screen-2xl mx-auto'>
+        <div className='bg-neutral-800'>
             <Navbar
                 fluid
                 rounded
+                className='max-w-screen-xl mx-auto bg-transparent text-white'
             >
                 <Navbar.Brand href="#">
                     <img
@@ -19,15 +20,15 @@ export const NavigationBar = () => {
                         className="mr-3 h-6 sm:h-9"
                         src={images.Logo}
                     />
-                    <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+                    <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white hover:text-lime-200">
                         Ecommerce
                     </span>
                 </Navbar.Brand>
                 <div className="flex md:order-2">
                     <Dropdown
                         inline
-                        // label={<Avatar alt="User settings" img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" rounded />}
-                        label={<FaUserAlt />}
+                        label={<Avatar alt="User settings" img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" rounded />}
+                        //label={<FaUserAlt />}
                     >
                         <Dropdown.Header>
                             <span className="block text-sm">

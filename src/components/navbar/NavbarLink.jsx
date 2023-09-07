@@ -5,8 +5,9 @@ export const NavbarLink = ({name, link}) => {
         <>
             <Navbar.Link
                 active
+                
             >
-                <Link to={link}>{name}</Link> 
+                <Link className="text-white hover:text-lime-200" to={link}>{name}</Link> 
             </Navbar.Link>
         </>
     )
